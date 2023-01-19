@@ -12,7 +12,7 @@ export const useConfirm = (message = "", onConfirm, onCancle) => {
     } else {
       onCancle();
     }
-  }
+  };
 
   return confirmAction;
-}
+};
