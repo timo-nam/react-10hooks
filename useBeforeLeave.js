@@ -1,4 +1,4 @@
-const useBeforeLeave = (onBefore) => {
+export const useBeforeLeave = (onBefore) => {
   const handle = (event) => {
     const { clientY } = event;
 
