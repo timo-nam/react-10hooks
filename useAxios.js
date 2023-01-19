@@ -1,6 +1,7 @@
 import defaultAxios from "axios";
+import { useState, useEffect } from "react";
 
-const useAxios = (opts, axiosInstance = defaultAxios) => {
+export const useAxios = (opts, axiosInstance = defaultAxios) => {
   const [state, setState] = useState({
     loading: true,
     error: null,

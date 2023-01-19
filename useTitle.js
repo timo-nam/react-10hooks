@@ -1,4 +1,6 @@
-export const useTitle = initialTitle => {
+import { useEffect, useState } from "react";
+
+export const useTitle = (initialTitle) => {
   const [title, setTitle] = useState(initialTitle);
 
   const updateTitle = () => {

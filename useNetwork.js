@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
+
 export const useNetwork = (onChange) => {
-  const [status, setStatus] = useState(navigator.onLine);
+  const [status, setStatus] = useState(navigator.onLine || true);
 
   const handleChange = () => {
     if (typeof onChange === "function") {
@@ -13,7 +15,7 @@ export const useNetwork = (onChange) => {
     window.addEventListener("online", handleChange);
     window.addEventListener("offline", handleChange);
 
-    return () => {
+    () => {
       window.removeEventListener("online", handleChange);
       window.removeEventListener("offline", handleChange);
     };
